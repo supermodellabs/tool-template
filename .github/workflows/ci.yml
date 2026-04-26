@@ -1,10 +1,10 @@
 name: CI
 
+# Template repo: keep workflow definitions as scaffolding for downstream
+# projects, but don't auto-run them here (no real code to test).
+# Downstream projects should restore push/pull_request triggers.
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
 
 # Cancel superseded PR runs; never cancel main runs
 concurrency:

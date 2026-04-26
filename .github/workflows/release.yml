@@ -1,8 +1,9 @@
 name: Release
 
+# Template repo: disabled auto-run. Downstream projects should restore the
+# `push: tags: ["v*"]` trigger.
 on:
-  push:
-    tags: ["v*"]
+  workflow_dispatch:
 
 permissions:
   contents: write
